@@ -23,13 +23,13 @@ set_target_properties(test_version PROPERTIES
     INCLUDE_DIRECTORIES ${Boost_INCLUDE_DIR}
 )
 
-target_link_libraries(helloworld_lib
-    helloworld
+target_link_libraries(helloworld
+    helloworld_lib
 )
 
 target_link_libraries(test_version
     ${Boost_LIBRARIES}
-    helloworld
+    helloworld_lib
 )
 
 install(TARGETS helloworld RUNTIME DESTINATION bin)
